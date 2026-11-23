@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Degradado del login y crear cuenta: #FFD6D2 → #FCA8A8 → #EC6155 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient android:angle="285" android:startColor="#FFD6D2" android:centerColor="#FCA8A8" android:endColor="#EC6155" />
+</shape>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Paleta del prototipo móvil de EVERBLOOM (app-styles.css) -->
+<resources>
+    <color name="eb_primary">#EC6155</color>
+    <color name="eb_primary_dark">#C94A3F</color>
+    <color name="eb_primary_deep">#8B2B24</color>
+    <color name="eb_secondary">#FCA8A8</color>
+    <color name="eb_bg_soft">#F8F7F6</color>
+    <color name="eb_bg_alt">#FFD6D2</color>
+    <color name="eb_white">#FFFFFF</color>
+    <color name="eb_text_dark">#2E2020</color>
+    <color name="eb_text_mid">#7A5F5F</color>
+    <color name="eb_text_light">#B89A9A</color>
+    <color name="eb_error">#C62828</color>
+    <color name="eb_linea">#F0E8E8</color>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Se deja por compatibilidad con la primera versión; ya no se usa -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/eb_white" />
+    <corners android:radius="16dp" />
+</shape>

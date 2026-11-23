@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">EverBloom</string>
+    <string name="lema">Flores eternas de satín</string>
+    <string name="correo">Correo electrónico</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="confirmar_contrasena">Confirmar contraseña</string>
+    <string name="nombres">Nombres</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="telefono">Teléfono (opcional)</string>
+    <string name="acceder">Acceder</string>
+    <string name="crear_cuenta">Crear cuenta</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="ya_tengo_cuenta">Ya tengo cuenta, iniciar sesión</string>
+    <string name="buscar">Buscar flores eternas…</string>
+    <string name="mis_pedidos">Mis pedidos</string>
+    <string name="cerrar_sesion">Cerrar sesión</string>
+    <string name="ordenar">Ordenar</string>
+    <string name="cantidad">Cantidad</string>
+    <string name="color">Color preferido</string>
+    <string name="mensaje_tarjeta">Mensaje para la tarjeta</string>
+    <string name="empaque">Empaque de regalo</string>
+    <string name="confirmar_pedido">Confirmar pedido</string>
+    <string name="cargando">Cargando…</string>
+    <string name="sin_productos">No hay productos para mostrar.</string>
+    <string name="sin_pedidos">Todavía no tienes pedidos.</string>
+    <string name="error_conexion">No se pudo conectar con el servidor. Revisa que la API esté encendida.</string>
+</resources>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Pantalla Personalizar arreglo (igual al prototipo app-personalizar.html) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/eb_bg_soft" android:fitsSystemWindows="true">
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+
+            <!-- Encabezado con foto -->
+            <FrameLayout android:layout_width="match_parent" android:layout_height="230dp">
+                <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/personalizar"
+                    android:scaleType="centerCrop" android:contentDescription="Arreglo de flores" />
+                <View android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/sombra_hero" />
+                <TextView android:id="@+id/btnVolver" android:layout_width="40dp" android:layout_height="40dp" android:layout_margin="14dp"
+                    android:background="@drawable/circulo_blanco" android:elevation="3dp" android:gravity="center" android:text="←"
+                    android:textColor="@color/eb_primary_deep" android:textSize="20sp" android:textStyle="bold" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_gravity="bottom"
+                    android:orientation="vertical" android:padding="18dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Personaliza tu arreglo"
+                        android:textColor="@color/eb_white" android:textSize="24sp" android:fontFamily="serif" android:textStyle="bold" />
+                    <TextView android:id="@+id/lblProducto" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Cargando…" android:textColor="#E6FFFFFF" android:textSize="13sp" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical"
+                android:paddingHorizontal="16dp" android:paddingBottom="20dp">
+
+                <!-- Tu selección: cantidad y precio -->
+                <LinearLayout style="@style/EbTarjeta">
+                    <TextView style="@style/EbEtiqueta" android:text="Tu selección" />
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp"
+                        android:gravity="center_vertical" android:orientation="horizontal">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                            android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cantidad"
+                                android:textColor="@color/eb_text_mid" android:textSize="12sp" />
+                            <TextView android:id="@+id/lblDisponibles" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:textColor="@color/eb_text_light" android:textSize="11sp" />
+                        </LinearLayout>
+                        <TextView android:id="@+id/btnMenos" android:layout_width="38dp" android:layout_height="38dp"
+                            android:background="@drawable/boton_cantidad" android:gravity="center" android:text="−"
+                            android:textColor="@color/eb_primary_dark" android:textSize="20sp" android:textStyle="bold" />
+                        <TextView android:id="@+id/lblCantidad" android:layout_width="44dp" android:layout_height="wrap_content"
+                            android:gravity="center" android:text="1" android:textColor="@color/eb_text_dark" android:textSize="18sp"
+                            android:textStyle="bold" />
+                        <TextView android:id="@+id/btnMas" android:layout_width="38dp" android:layout_height="38dp"
+                            android:background="@drawable/boton_cantidad" android:gravity="center" android:text="+"
+                            android:textColor="@color/eb_primary_dark" android:textSize="20sp" android:textStyle="bold" />
+                    </LinearLayout>
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginVertical="12dp"
+                        android:background="@color/eb_linea" />
+                    <LinearLayout style="@style/EbFila">
+                        <TextView style="@style/EbFilaNombre" android:text="Precio total" />
+                        <TextView android:id="@+id/lblPrecioSeleccion" style="@style/EbFilaValor" android:textColor="@color/eb_primary_dark"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Color del satín -->
+                <LinearLayout style="@style/EbTarjeta">
+                    <TextView style="@style/EbEtiqueta" android:text="Color del satín" />
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+                        <LinearLayout android:id="@+id/satinRosa" style="@style/EbSatin">
+                            <View style="@style/EbSatinMuestra" android:background="@drawable/satin_rosa" />
+                            <TextView style="@style/EbSatinTexto" android:text="Rosa Coral" />
+                        </LinearLayout>
+                        <LinearLayout android:id="@+id/satinRojo" style="@style/EbSatin">
+                            <View style="@style/EbSatinMuestra" android:background="@drawable/satin_rojo" />
+                            <TextView style="@style/EbSatinTexto" android:text="Rojo Pasión" />
+                        </LinearLayout>
+                        <LinearLayout android:id="@+id/satinBlanco" style="@style/EbSatin">
+                            <View style="@style/EbSatinMuestra" android:background="@drawable/satin_blanco" />
+                            <TextView style="@style/EbSatinTexto" android:text="Blanco Nube" />
+                        </LinearLayout>
+                        <LinearLayout android:id="@+id/satinNude" style="@style/EbSatin">
+                            <View style="@style/EbSatinMuestra" android:background="@drawable/nude" />
+                            <TextView style="@style/EbSatinTexto" android:text="Nude Eterno" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Empaque -->
+                <LinearLayout style="@style/EbTarjeta">
+                    <TextView style="@style/EbEtiqueta" android:text="Empaque" />
+                    <Spinner android:id="@+id/selEmpaque" android:layout_width="match_parent" android:layout_height="48dp"
+                        android:layout_marginTop="8dp" android:background="@drawable/campo_texto" android:paddingHorizontal="12dp" />
+                </LinearLayout>
+
+                <!-- Dedicatoria -->
+                <LinearLayout style="@style/EbTarjeta">
+                    <TextView style="@style/EbEtiqueta" android:text="Dedicatoria (opcional)" />
+                    <EditText android:id="@+id/txtMensaje" android:layout_width="match_parent" android:layout_height="96dp"
+                        android:layout_marginTop="8dp" android:background="@drawable/campo_texto" android:gravity="top|start"
+                        android:padding="12dp" android:hint="Escribe un mensaje para la tarjeta…" android:textColorHint="@color/eb_text_light"
+                        android:textColor="@color/eb_text_dark" android:textSize="14sp" android:maxLength="200"
+                        android:inputType="textMultiLine|textCapSentences" />
+                    <TextView android:id="@+id/lblContador" android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp" android:gravity="end" android:text="0 / 200" android:textColor="@color/eb_text_light"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+                <!-- Resumen -->
+                <LinearLayout style="@style/EbTarjeta">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                        <ImageView android:layout_width="64dp" android:layout_height="64dp" android:background="@drawable/celda_suave"
+                            android:clipToOutline="true" android:src="@drawable/resumen" android:scaleType="centerCrop"
+                            android:contentDescription="Resumen" />
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                            android:layout_marginStart="12dp" android:orientation="vertical">
+                            <TextView style="@style/EbTituloSerif" android:text="Resumen del arreglo" android:textSize="15sp" />
+                            <TextView android:id="@+id/lblResumen" android:layout_width="match_parent" android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp" android:textColor="@color/eb_text_mid" android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Pie con total y botón Continuar -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@color/eb_white"
+        android:elevation="8dp" android:gravity="center_vertical" android:orientation="horizontal" android:padding="16dp">
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+            <TextView style="@style/EbEtiqueta" android:text="Total a pagar" />
+            <TextView android:id="@+id/lblTotal" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="$ 0" android:textColor="@color/eb_text_dark" android:textSize="20sp" android:fontFamily="serif"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnContinuar" android:layout_width="wrap_content"
+            android:layout_height="50dp" android:background="@drawable/boton_principal" android:paddingHorizontal="26dp"
+            android:text="Continuar →" android:textAllCaps="false" android:textColor="@color/eb_white" android:textSize="15sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

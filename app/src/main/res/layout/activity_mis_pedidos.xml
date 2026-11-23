@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Pantalla Mis pedidos -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/eb_bg_soft" android:fitsSystemWindows="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/encabezado_degradado"
+        android:orientation="vertical" android:paddingHorizontal="20dp" android:paddingVertical="20dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mis pedidos"
+            android:textColor="@color/eb_white" android:textSize="24sp" android:fontFamily="serif" android:textStyle="bold" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Consulta el estado de tus compras"
+            android:textColor="#E6FFFFFF" android:textSize="12sp" />
+    </LinearLayout>
+    <TextView android:id="@+id/lblVacio" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center"
+        android:padding="24dp" android:text="Cargando pedidos…" android:textColor="@color/eb_text_mid" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/listaPedidos" android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:clipToPadding="false" android:paddingHorizontal="16dp" android:paddingBottom="12dp" />
+    <include layout="@layout/barra_pestanas" />
+</LinearLayout>

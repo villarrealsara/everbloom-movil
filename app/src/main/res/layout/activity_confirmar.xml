@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Pantalla Confirmar pedido (igual al prototipo app-confirmar-pedido.html) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/eb_bg_soft" android:fitsSystemWindows="true">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/encabezado_degradado"
+        android:gravity="center_vertical" android:orientation="horizontal" android:paddingHorizontal="16dp" android:paddingVertical="18dp">
+        <TextView android:id="@+id/btnVolver" android:layout_width="38dp" android:layout_height="38dp" android:background="@drawable/circulo_blanco"
+            android:gravity="center" android:text="←" android:textColor="@color/eb_primary_deep" android:textSize="19sp" android:textStyle="bold" />
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:layout_marginStart="14dp" android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Confirmar pedido"
+                android:textColor="@color/eb_white" android:textSize="22sp" android:fontFamily="serif" android:textStyle="bold" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Revisa los datos antes de confirmar"
+                android:textColor="#E6FFFFFF" android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical"
+            android:paddingHorizontal="16dp" android:paddingBottom="20dp">
+
+            <LinearLayout style="@style/EbTarjeta">
+                <TextView style="@style/EbEtiqueta" android:text="Datos del cliente" />
+                <LinearLayout style="@style/EbFila" android:layout_marginTop="6dp">
+                    <TextView style="@style/EbFilaNombre" android:text="Nombre" />
+                    <TextView android:id="@+id/lblCliente" style="@style/EbFilaValor" android:text="…" />
+                </LinearLayout>
+                <LinearLayout style="@style/EbFila">
+                    <TextView style="@style/EbFilaNombre" android:text="Correo" />
+                    <TextView android:id="@+id/lblCorreo" style="@style/EbFilaValor" android:text="…" />
+                </LinearLayout>
+                <LinearLayout style="@style/EbFila">
+                    <TextView style="@style/EbFilaNombre" android:text="Teléfono" />
+                    <TextView android:id="@+id/lblTelefono" style="@style/EbFilaValor" android:text="…" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/EbTarjeta">
+                <TextView style="@style/EbEtiqueta" android:text="Resumen del pedido" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+                    <ImageView android:layout_width="70dp" android:layout_height="70dp" android:background="@drawable/celda_suave"
+                        android:clipToOutline="true" android:src="@drawable/resumen" android:scaleType="centerCrop"
+                        android:contentDescription="Producto" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:layout_marginStart="12dp" android:orientation="vertical">
+                        <TextView android:id="@+id/lblProducto" style="@style/EbTituloSerif" android:textSize="15sp" />
+                        <TextView android:id="@+id/lblDetalle" android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp" android:textColor="@color/eb_text_mid" android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginVertical="12dp"
+                    android:background="@color/eb_linea" />
+                <LinearLayout style="@style/EbFila">
+                    <TextView style="@style/EbFilaNombre" android:text="Subtotal" />
+                    <TextView android:id="@+id/lblSubtotal" style="@style/EbFilaValor" />
+                </LinearLayout>
+                <LinearLayout style="@style/EbFila">
+                    <TextView style="@style/EbFilaNombre" android:text="Empaque" />
+                    <TextView android:id="@+id/lblEmpaque" style="@style/EbFilaValor" />
+                </LinearLayout>
+                <LinearLayout style="@style/EbFila">
+                    <TextView style="@style/EbFilaNombre" android:text="Entrega estimada" />
+                    <TextView style="@style/EbFilaValor" android:text="3–5 días hábiles" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/EbTarjeta" android:background="@drawable/celda_suave" android:elevation="0dp">
+                <LinearLayout style="@style/EbFila" android:gravity="center_vertical">
+                    <TextView style="@style/EbFilaNombre" android:text="TOTAL A PAGAR" android:textStyle="bold"
+                        android:textColor="@color/eb_primary_deep" android:letterSpacing="0.08" />
+                    <TextView android:id="@+id/lblTotal" style="@style/EbFilaValor" android:textSize="22sp" android:fontFamily="serif"
+                        android:textColor="@color/eb_primary_deep" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnConfirmar" android:layout_width="match_parent"
+                android:layout_height="52dp" android:layout_marginTop="20dp" android:background="@drawable/boton_principal"
+                android:text="Confirmar pedido" android:textAllCaps="false" android:textColor="@color/eb_white" android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

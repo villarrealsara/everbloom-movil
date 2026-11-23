@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Pantalla Crear cuenta (igual al prototipo app-crear-cuenta.html) -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/fondo_degradado" android:fillViewport="true" android:fitsSystemWindows="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:paddingHorizontal="28dp" android:paddingBottom="36dp">
+        <ImageView android:layout_width="160dp" android:layout_height="82dp" android:layout_gravity="center_horizontal"
+            android:layout_marginTop="32dp" android:src="@drawable/logo_blanco" android:scaleType="fitCenter"
+            android:contentDescription="Logo EverBloom" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp"
+            android:layout_marginBottom="8dp" android:gravity="center" android:text="Crear cuenta"
+            android:textColor="@color/eb_white" android:textSize="28sp" android:fontFamily="serif" android:textStyle="bold" />
+        <EditText android:id="@+id/txtNombres" android:layout_width="match_parent" android:layout_height="52dp"
+            android:layout_marginTop="11dp" android:background="@drawable/campo_pildora" android:paddingHorizontal="22dp"
+            android:hint="Nombre" android:textColorHint="@color/eb_text_mid" android:textColor="@color/eb_text_dark"
+            android:inputType="textPersonName" />
+        <EditText android:id="@+id/txtApellidos" android:layout_width="match_parent" android:layout_height="52dp"
+            android:layout_marginTop="11dp" android:background="@drawable/campo_pildora" android:paddingHorizontal="22dp"
+            android:hint="Apellido" android:textColorHint="@color/eb_text_mid" android:textColor="@color/eb_text_dark"
+            android:inputType="textPersonName" />
+        <EditText android:id="@+id/txtCorreo" android:layout_width="match_parent" android:layout_height="52dp"
+            android:layout_marginTop="11dp" android:background="@drawable/campo_pildora" android:paddingHorizontal="22dp"
+            android:hint="Correo electrónico" android:textColorHint="@color/eb_text_mid" android:textColor="@color/eb_text_dark"
+            android:inputType="textEmailAddress" />
+        <EditText android:id="@+id/txtTelefono" android:layout_width="match_parent" android:layout_height="52dp"
+            android:layout_marginTop="11dp" android:background="@drawable/campo_pildora" android:paddingHorizontal="22dp"
+            android:hint="Teléfono (opcional)" android:textColorHint="@color/eb_text_mid" android:textColor="@color/eb_text_dark"
+            android:inputType="phone" />
+        <EditText android:id="@+id/txtContrasena" android:layout_width="match_parent" android:layout_height="52dp"
+            android:layout_marginTop="11dp" android:background="@drawable/campo_pildora" android:paddingHorizontal="22dp"
+            android:hint="Contraseña" android:textColorHint="@color/eb_text_mid" android:textColor="@color/eb_text_dark"
+            android:inputType="textPassword" />
+        <EditText android:id="@+id/txtConfirmar" android:layout_width="match_parent" android:layout_height="52dp"
+            android:layout_marginTop="11dp" android:background="@drawable/campo_pildora" android:paddingHorizontal="22dp"
+            android:hint="Confirmar contraseña" android:textColorHint="@color/eb_text_mid" android:textColor="@color/eb_text_dark"
+            android:inputType="textPassword" />
+        <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnRegistrar" android:layout_width="match_parent"
+            android:layout_height="52dp" android:layout_marginTop="16dp" android:background="@drawable/boton_principal"
+            android:text="Registrarse" android:textAllCaps="false" android:textColor="@color/eb_white" android:textSize="16sp"
+            android:textStyle="bold" />
+        <TextView android:id="@+id/lnkLogin" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" android:gravity="center" android:minHeight="40dp"
+            android:text="¿Ya tienes una cuenta? Inicia sesión" android:textColor="@color/eb_white" android:textStyle="bold" />
+    </LinearLayout>
+</ScrollView>

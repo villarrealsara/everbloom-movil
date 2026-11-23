@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Pantalla Catálogo (igual al prototipo app-catalogo.html) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/eb_bg_soft" android:fitsSystemWindows="true">
+
+    <!-- Barra superior con el logo -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="60dp" android:background="@color/eb_white"
+        android:elevation="2dp" android:gravity="center_vertical" android:orientation="horizontal" android:paddingHorizontal="18dp">
+        <ImageView android:layout_width="110dp" android:layout_height="44dp" android:src="@drawable/logo_oscuro"
+            android:scaleType="fitStart" android:contentDescription="Logo EverBloom" />
+        <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
+        <TextView android:id="@+id/lblSaludo" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textColor="@color/eb_text_mid" android:textSize="13sp" android:textStyle="bold" />
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView android:id="@+id/scrollCatalogo" android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:fillViewport="true">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp">
+
+            <!-- Buscador -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="50dp" android:background="@drawable/buscador"
+                android:gravity="center_vertical" android:orientation="horizontal" android:paddingStart="18dp" android:paddingEnd="6dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🔍" android:textSize="15sp" />
+                <EditText android:id="@+id/txtBuscar" android:layout_width="0dp" android:layout_height="match_parent"
+                    android:layout_weight="1" android:layout_marginStart="8dp" android:background="@android:color/transparent"
+                    android:hint="Buscar flores, colores…" android:textColorHint="@color/eb_text_light"
+                    android:textColor="@color/eb_text_dark" android:textSize="14sp" android:inputType="text"
+                    android:imeOptions="actionSearch" />
+            </LinearLayout>
+
+            <!-- Banner principal -->
+            <FrameLayout android:layout_width="match_parent" android:layout_height="190dp" android:layout_marginTop="16dp"
+                android:background="@drawable/tarjeta" android:clipToOutline="true" android:elevation="3dp">
+                <ImageView android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:src="@drawable/hero_flores" android:scaleType="centerCrop" android:contentDescription="Flores de satín" />
+                <View android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/sombra_hero" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_gravity="bottom"
+                    android:orientation="vertical" android:padding="18dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="COLECCIÓN 2026"
+                        android:textColor="#E6FFFFFF" android:textSize="10sp" android:textStyle="bold" android:letterSpacing="0.15" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Flores Eternas de Satín"
+                        android:textColor="@color/eb_white" android:textSize="22sp" android:fontFamily="serif" android:textStyle="bold" />
+                    <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnVerColeccion" android:layout_width="wrap_content"
+                        android:layout_height="36dp" android:layout_marginTop="8dp" android:background="@drawable/boton_hero"
+                        android:paddingHorizontal="18dp" android:text="Ver colección" android:textAllCaps="false"
+                        android:textColor="@color/eb_primary_deep" android:textSize="13sp" android:textStyle="bold" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <!-- Filtro por color -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp"
+                android:gravity="center_vertical" android:orientation="horizontal">
+                <TextView style="@style/EbEtiqueta" android:text="Filtrar por color" />
+                <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
+                <TextView android:id="@+id/lnkVerTodo" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:padding="6dp" android:text="Ver todo" android:textColor="@color/eb_primary_dark" android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+                <LinearLayout android:id="@+id/chipRosa" style="@style/EbChip">
+                    <ImageView style="@style/EbChipFoto" android:src="@drawable/color_rosa" android:contentDescription="Rosa" />
+                    <TextView style="@style/EbChipTexto" android:text="Rosa" />
+                </LinearLayout>
+                <LinearLayout android:id="@+id/chipRojo" style="@style/EbChip">
+                    <ImageView style="@style/EbChipFoto" android:src="@drawable/color_rojo" android:contentDescription="Rojo" />
+                    <TextView style="@style/EbChipTexto" android:text="Rojo" />
+                </LinearLayout>
+                <LinearLayout android:id="@+id/chipBlanco" style="@style/EbChip">
+                    <ImageView style="@style/EbChipFoto" android:src="@drawable/color_blanco" android:contentDescription="Blanco" />
+                    <TextView style="@style/EbChipTexto" android:text="Blanco" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Productos -->
+            <TextView style="@style/EbTituloSerif" android:id="@+id/lblTituloLista" android:layout_marginTop="22dp"
+                android:text="Nuestros arreglos" android:textSize="19sp" />
+            <TextView android:id="@+id/lblVacio" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="12dp" android:gravity="center" android:padding="20dp" android:text="Cargando productos…"
+                android:textColor="@color/eb_text_mid" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/listaProductos" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginTop="6dp" android:nestedScrollingEnabled="false" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <include layout="@layout/barra_pestanas" />
+</LinearLayout>

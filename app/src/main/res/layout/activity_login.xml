@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Pantalla Iniciar sesión (igual al prototipo app-login.html) -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/fondo_degradado" android:fillViewport="true" android:fitsSystemWindows="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:paddingHorizontal="28dp" android:paddingBottom="36dp">
+
+        <ImageView android:layout_width="180dp" android:layout_height="92dp" android:layout_gravity="center_horizontal"
+            android:layout_marginTop="44dp" android:src="@drawable/logo_blanco" android:scaleType="fitCenter"
+            android:contentDescription="Logo EverBloom" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp"
+            android:gravity="center" android:text="Iniciar sesión" android:textColor="@color/eb_white"
+            android:textSize="30sp" android:fontFamily="serif" android:textStyle="bold" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center"
+            android:text="Inicia sesión para continuar" android:textColor="#D9FFFFFF" android:textSize="14sp" />
+
+        <TextView android:id="@+id/lblError" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="14dp" android:background="@drawable/aviso_error" android:paddingVertical="10dp"
+            android:paddingHorizontal="16dp" android:textColor="@color/eb_error" android:textSize="13sp"
+            android:textStyle="bold" android:visibility="gone" />
+
+        <EditText android:id="@+id/txtCorreo" android:layout_width="match_parent" android:layout_height="52dp"
+            android:layout_marginTop="22dp" android:background="@drawable/campo_pildora" android:paddingHorizontal="22dp"
+            android:hint="Correo electrónico" android:textColorHint="@color/eb_text_mid" android:textColor="@color/eb_text_dark"
+            android:inputType="textEmailAddress" android:autofillHints="emailAddress" />
+        <EditText android:id="@+id/txtContrasena" android:layout_width="match_parent" android:layout_height="52dp"
+            android:layout_marginTop="12dp" android:background="@drawable/campo_pildora" android:paddingHorizontal="22dp"
+            android:hint="Contraseña" android:textColorHint="@color/eb_text_mid" android:textColor="@color/eb_text_dark"
+            android:inputType="textPassword" android:autofillHints="password" />
+        <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnAcceder" android:layout_width="match_parent"
+            android:layout_height="52dp" android:layout_marginTop="16dp" android:background="@drawable/boton_principal"
+            android:text="Acceder" android:textAllCaps="false" android:textColor="@color/eb_white" android:textSize="16sp"
+            android:textStyle="bold" android:letterSpacing="0.06" />
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="26dp"
+            android:gravity="center" android:text="¿Olvidaste tu contraseña?" android:textColor="#D9FFFFFF" android:textSize="13sp" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center"
+            android:text="www.everbloom.com" android:textColor="@color/eb_white" android:textStyle="bold" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp"
+            android:gravity="center" android:text="¿No tienes cuenta?" android:textColor="#D9FFFFFF" android:textSize="13sp" />
+        <TextView android:id="@+id/lnkCrearCuenta" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:gravity="center" android:minHeight="40dp" android:text="Crear cuenta" android:textColor="@color/eb_white"
+            android:textStyle="bold" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Barra de pestañas inferior: Inicio, Tienda, Pedidos y Perfil -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="68dp"
+    android:orientation="horizontal" android:background="@color/eb_white" android:elevation="8dp"
+    android:paddingHorizontal="8dp" android:paddingVertical="6dp" android:gravity="center_vertical">
+    <LinearLayout android:id="@+id/tabInicio" style="@style/EbPestana">
+        <TextView style="@style/EbPestanaIcono" android:text="🏠" />
+        <TextView android:id="@+id/tabInicioTxt" style="@style/EbPestanaTexto" android:text="INICIO" />
+    </LinearLayout>
+    <LinearLayout android:id="@+id/tabTienda" style="@style/EbPestana">
+        <TextView style="@style/EbPestanaIcono" android:text="🛍️" />
+        <TextView android:id="@+id/tabTiendaTxt" style="@style/EbPestanaTexto" android:text="TIENDA" />
+    </LinearLayout>
+    <LinearLayout android:id="@+id/tabPedidos" style="@style/EbPestana">
+        <TextView style="@style/EbPestanaIcono" android:text="📦" />
+        <TextView android:id="@+id/tabPedidosTxt" style="@style/EbPestanaTexto" android:text="PEDIDOS" />
+    </LinearLayout>
+    <LinearLayout android:id="@+id/tabPerfil" style="@style/EbPestana">
+        <TextView style="@style/EbPestanaIcono" android:text="👤" />
+        <TextView android:id="@+id/tabPerfilTxt" style="@style/EbPestanaTexto" android:text="PERFIL" />
+    </LinearLayout>
+</LinearLayout>

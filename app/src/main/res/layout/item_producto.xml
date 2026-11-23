@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tarjeta de un producto en la cuadrícula de dos columnas -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="6dp"
+    android:background="@drawable/tarjeta" android:clipToOutline="true" android:elevation="3dp"
+    android:orientation="vertical" android:clickable="true" android:focusable="true">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="140dp">
+        <ImageView android:id="@+id/imgProducto" android:layout_width="match_parent" android:layout_height="match_parent"
+            android:scaleType="centerCrop" android:contentDescription="Foto del producto" />
+        <TextView android:id="@+id/lblAgotado" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_margin="8dp" android:background="@drawable/estado_chip" android:paddingHorizontal="10dp"
+            android:paddingVertical="3dp" android:text="Agotado" android:textColor="@color/eb_primary_deep" android:textSize="10sp"
+            android:textStyle="bold" android:visibility="gone" />
+    </FrameLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical"
+        android:padding="12dp">
+        <TextView android:id="@+id/lblNombre" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:maxLines="2" android:ellipsize="end" android:textColor="@color/eb_text_dark" android:textSize="14sp"
+            android:fontFamily="serif" android:textStyle="bold" />
+        <TextView android:id="@+id/lblPrecio" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="3dp" android:textColor="@color/eb_text_mid" android:textSize="12sp" />
+        <TextView android:id="@+id/lblAccion" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="6dp" android:textColor="@color/eb_primary_dark" android:textSize="12sp" android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>
